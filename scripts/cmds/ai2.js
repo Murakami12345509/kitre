@@ -2,7 +2,7 @@ const axios = require("axios");
 const path = require("path");
 const fs = require("fs-extra");
 
-const Prefixes = ["vipai", "vip ai", "Vip-ai"];
+const Prefixes = ["vipai", "Vip-ai", "Vip-Ai"];
 
 global.chatHistory = {};
 
@@ -14,10 +14,10 @@ module.exports = {
     role: 1,
     category: "ai",
     shortDescription: {
-      en: "Asks Vip AI for an answer.",
+      en: "Asks AI for an answer.",
     },
     longDescription: {
-      en: "Asks Vip AI for an answer based on the user prompt.",
+      en: "Asks AI for an answer based on the user prompt.",
     },
     guide: {
       en: `{pn} [prompt]
@@ -80,7 +80,7 @@ maid, waifu, marin-kitagawa, mori-calliope, raiden-shogun, selfies, uniform, kam
         return;
       }
 
-      api.setMessageReaction("âŒ›", event.messageID, () => {}, true);
+      api.setMessageReaction("⌛", event.messageID, () => {}, true);
 
       const response = await axios.get(
         `https://over-ai-yau-5001-center-hassan.vercel.app/ai?prompt=${encodeURIComponent(prompt)}`
@@ -118,7 +118,7 @@ maid, waifu, marin-kitagawa, mori-calliope, raiden-shogun, selfies, uniform, kam
         if (imgData.length > 0) {
           await api.sendMessage(
             {
-              body: `HERE IS YOUR RESULTSâœ…`,
+              body: `HERE IS YOUR RESULTS✅`,
               attachment: imgData,
             },
             event.threadID,
@@ -132,7 +132,7 @@ maid, waifu, marin-kitagawa, mori-calliope, raiden-shogun, selfies, uniform, kam
         await message.reply(messageText);
       }
 
-      api.setMessageReaction("âœ…", event.messageID, () => {}, true);
+      api.setMessageReaction("✅", event.messageID, () => {}, true);
     } catch (error) {
       console.error("Error in onChat:", error);
       await api.sendMessage(
