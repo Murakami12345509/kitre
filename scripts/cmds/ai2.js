@@ -2,7 +2,7 @@ const axios = require("axios");
 const path = require("path");
 const fs = require("fs-extra");
 
-const Prefixes = ["vipai", "Vip-ai", "Vip-Ai"];
+const Prefixes = ["ai2", "Yau5", "Ai2"];
 
 global.chatHistory = {};
 
@@ -35,7 +35,10 @@ Example usage:
    - {pn} waifu raiden-shogun
 
 Available versatile waifu tags:
-maid, waifu, marin-kitagawa, mori-calliope, raiden-shogun, selfies, uniform, kamisato-ayaka`
+maid, waifu, marin-kitagawa, mori-calliope, raiden-shogun, oppai, selfies, uniform, kamisato-ayaka
+
+Available NSFW waifu tags:
+ass, hentai, milf, oral, paizuri, ecchi, ero`
     },
   },
   onStart: async function ({ message, api, event, args }) {
