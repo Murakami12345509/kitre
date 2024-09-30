@@ -8,10 +8,10 @@ global.chatHistory = {};
 
 module.exports = {
   config: {
-    name: "vip-ai",
+    name: "ai2",
     version: "2.2.4",
     author: "Hassan", // do not change
-    role: 1,
+    role: 2,
     category: "ai",
     shortDescription: {
       en: "Asks AI for an answer.",
